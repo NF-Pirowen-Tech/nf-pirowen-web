@@ -1,48 +1,51 @@
-# Astro Starter Kit: Basics
+# NF Pirowen - Club de Fútbol
 
-```sh
-npm create astro@latest -- --template basics
-```
+![Logo del Club NF Pirowen](images/Escudo.jpg)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Descripción
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+El Club de Fútbol NF Pirowen es una comunidad apasionada de jóvenes amantes del deporte, fundada en 2022 por Manuel Pose y Samuel Fuentes. Actualmente, nuestro equipo es presidido por Manuel Pose. Somos un club acogedor ubicado en A Piroga, Galicia, donde disfrutamos del fútbol en familia, fusionando nuestra pasión por el deporte con nuestras raíces gallegas.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+En NF Pirowen, nuestro lema "Go NF Go" nos impulsa a superar nuestros límites y alcanzar nuevas metas juntos. Creemos en el poder del trabajo en equipo y la camaradería, creando una comunidad unida que trasciende los límites de la cancha. Valoramos y apoyamos el crecimiento personal y deportivo de cada miembro, brindando un espacio enriquecedor para alcanzar el máximo potencial.
 
-## 🚀 Project Structure
+## Características
 
-Inside of your Astro project, you'll see the following folders and files:
+- **Pasión por el Fútbol:** Amamos el fútbol y disfrutamos cada momento en el campo.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- **Ambiente Acogedor:** Nuestro club ofrece un ambiente cálido y amigable para todos los miembros.
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+- **Identidad Gallega:** Celebramos nuestras raíces gallegas y fusionamos la pasión por el fútbol con nuestra herencia cultural.
 
-## 🧞 Commands
+- **Lema Inspirador:** "Go NF Go" es nuestra invitación a ir más allá y perseguir nuestras metas con determinación.
 
-All commands are run from the root of the project, from a terminal:
+## Contenido del Repositorio
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- **`html`:** Carpeta de archivos HTML que contienen la página web oficial del club.
 
-## 👀 Want to learn more?
+- **`css`:** Hoja de estilos CSS para el diseño y apariencia de la página web.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- **`images`:** Carpeta que contiene imágenes relacionadas con el club.
+
+## Página Web Oficial
+Actualmente en estado de construcción
+
+## Redes Sociales
+
+Síguenos en nuestras redes sociales para mantenerte actualizado con las últimas novedades, eventos y fotos:
+
+- [Instagram](https://www.instagram.com/nfpirowen)
+- [YouTube](https://www.youtube.com/@NFPirowen/videos)
+
+## Contribuciones
+
+¡Agradecemos las contribuciones de la comunidad para mejorar el club! Si deseas colaborar, por favor, revisa nuestras pautas de contribución y envía tus pull requests.
+
+## Licencia
+
+Este proyecto está bajo la Licencia [Creative Commons Attribution 4.0 International License](LICENSE.md).
+
+## Contacto
+
+Para cualquier consulta o información adicional, no dudes en contactarnos en [nfpirowen@gmail.com](mailto:nfpirowen@gmail.com).
+
+Todos los derechos reservados &copy; NF Pirowen.
