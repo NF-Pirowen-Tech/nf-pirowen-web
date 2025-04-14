@@ -6,7 +6,11 @@
 	],
 	"settings": {
 		"cSpell.words": [
-			"Pirowen"
+			"github",
+			"nixos",
+			"nixpkgs",
+			"Pirowen",
+			"pkgs"
 		]
 	}
 }
