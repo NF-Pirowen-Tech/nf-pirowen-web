@@ -1,6 +1,9 @@
 ---
 const posiciones = ["PORTEROS", "DEFENSAS", "CENTROCAMPISTAS", "DELANTEROS"]
 
+const centrocampistas = "CENTROCAMPISTAS"
+const porteros = "PORTEROS"
+
 const jugadores = [
     {
         nombre: "Pichu",
@@ -9,7 +12,7 @@ const jugadores = [
         dorsal: "10",
         piernaBuena: "Derecha",
         descripcion: "Lorem ipsum",
-        imgUrl: ""
+        imgUrl: "/src/assets/sam.png"
     },
     {
         nombre: "Pablo",
@@ -18,7 +21,7 @@ const jugadores = [
         dorsal: "47",
         piernaBuena: "Izquierda",
         descripcion: "Lorem ipsum",
-        imgUrl: ""
+        imgUrl: "/src/assets/sam.png"
     },
     {
         nombre: "FLK",
@@ -27,7 +30,7 @@ const jugadores = [
         dorsal: "11",
         piernaBuena: "Izquierda",
         descripcion: "Lorem ipsum",
-        imgUrl: ""
+        imgUrl: "/src/assets/sam.png"
     },
     {
         nombre: "Alex",
@@ -36,7 +39,7 @@ const jugadores = [
         dorsal: "33",
         piernaBuena: "Derecha",
         descripcion: "Lorem ipsum",
-        imgUrl: ""
+        imgUrl: "/src/assets/sam.png"
     },
     {
         nombre: "Quiños",
@@ -45,7 +48,7 @@ const jugadores = [
         dorsal: "69",
         piernaBuena: "Izquierda",
         descripcion: "Lorem ipsum",
-        imgUrl: ""
+        imgUrl: "/src/assets/sam.png"
     },
     {
         nombre: "Guille",
@@ -54,7 +57,7 @@ const jugadores = [
         dorsal: "6",
         piernaBuena: "Izquierda",
         descripcion: "Lorem ipsum",
-        imgUrl: ""
+        imgUrl: "/src/assets/sam.png"
     },
     {
         nombre: "Veloso",
@@ -63,7 +66,7 @@ const jugadores = [
         dorsal: "16",
         piernaBuena: "Izquierda",
         descripcion: "",
-        imgUrl: ""
+        imgUrl: "/src/assets/sam.png"
     },
     {
         nombre: "Borja",
@@ -72,7 +75,7 @@ const jugadores = [
         dorsal: "24",
         piernaBuena: "Derecha",
         descripcion: "",
-        imgUrl: ""
+        imgUrl: "/src/assets/sam.png"
     },
     {
         nombre: "Franitus",
@@ -81,7 +84,7 @@ const jugadores = [
         dorsal: "99",
         piernaBuena: "Derecha",
         descripcion: "",
-        imgUrl: ""
+        imgUrl: "/src/assets/sam.png"
     },
     {
         nombre: "Anibal",
@@ -90,7 +93,7 @@ const jugadores = [
         dorsal: "9",
         piernaBuena: "Derecha",
         descripcion: "",
-        imgUrl: ""
+        imgUrl: "/src/assets/sam.png"
     },
     {
         nombre: "Dami",
@@ -99,7 +102,7 @@ const jugadores = [
         dorsal: "7",
         piernaBuena: "Derecha",
         descripcion: "",
-        imgUrl: ""
+        imgUrl: "/src/assets/sam.png"
     },
     {
         nombre: "Fuentes",
@@ -108,7 +111,7 @@ const jugadores = [
         dorsal: "8",
         piernaBuena: "Derecha",
         descripcion: "",
-        imgUrl: ""
+        imgUrl: "/src/assets/sam.png"
     },
     {
         nombre: "Brais",
@@ -117,7 +120,7 @@ const jugadores = [
         dorsal: "14",
         piernaBuena: "",
         descripcion: "",
-        imgUrl: ""
+        imgUrl: "/src/assets/sam.png"
     },
     {
         nombre: "Roxo",
@@ -126,7 +129,7 @@ const jugadores = [
         dorsal: "18",
         piernaBuena: "Derecha",
         descripcion: "",
-        imgUrl: ""
+        imgUrl: "/src/assets/sam.png"
     }
 ]
 
@@ -142,10 +145,13 @@ const jugadores = [
                         {jugadores.map((jugador) => {
                             if (jugador.posicion === posicion) {
                                 return (
-                                        <div class="bg-[#6f4695] w-[400px] shadow-md flex flex-col-reverse h-96 text-center">
-                                            <div class="w-full">
+                                        <div class="bg-[#6f4695] w-[460px] shadow-md flex flex-col-reverse h-[460px] text-center">
+                                            <div class="absolute z-10">
+                                                <img src={jugador.imgUrl} alt="" class="w-[460px] h-[460px]" />
+                                            </div>
+                                            <div class="w-full z-20 ">
                                                 <h1 class="numeros text-8xl">{jugador.dorsal}</h1>
-                                                <h2 class="uppercase text-4xl p-2">{jugador.nombre}</h2>
+                                                <h2 class="opacidad uppercase text-4xl p-2">{jugador.nombre}</h2>
                                             </div>
                                         </div>
                                 )
@@ -166,4 +172,9 @@ const jugadores = [
 		text-align: center;
         opacity: 0.2;
 	}
+
+    .opacidad {
+        background-color:rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(5px);
+    }
 </style>
