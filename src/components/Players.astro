@@ -18,9 +18,14 @@ const positions = ["PORTEROS", "DEFENSAS", "CENTROCAMPISTAS", "DELANTEROS"];
             <div class="grid grid-cols-1 lg:grid-cols-3 justify-items-center mb-4 gap-4">
             {players
                 .filter((player) => player.data.position === position)
-                .map((player) => (
-                <PlayerCard player={player.data} />
-                ))}
+                .map((player) => {
+                    const { slug } = player;
+                    return (
+                        <a href={`/players/${slug}`} class="no-underline">
+                        <PlayerCard player={player} />
+                        </a>
+                    );
+            })}
             </div>
         </div>
         ))

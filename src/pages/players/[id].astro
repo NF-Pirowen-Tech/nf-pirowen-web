@@ -1,0 +1,45 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+    const players = await getCollection("players");
+
+    return players.map((player) => ({
+        params: { id: player.slug },
+        props: { player },
+    }));
+}
+
+const { player } = Astro.props;
+const { slug, data } = player;
+const { name, age, position, dorsal, goodLeg, img } = data;
+const { Content } = await render(player);
+const imageUrl = `/images/${img}`;
+---
+
+<Layout title={`${name} - NF Pirowen`}>
+    <div class="flex gap-12">
+        <aside class="flex flex-col items-center gap-4">
+            <a href="/" class="hover:underline opacity-70">← Volver atrás</a>
+            <img
+                transition:name={`img-${slug}`}
+                class="rounded w-72 h-auto"
+                src={imageUrl}
+                alt={name}
+            />
+        </aside>
+
+        <main class="max-w-3xl">
+            <h1
+                transition:name={`name-${slug}`}
+                class="text-4xl font-bold mb-4"
+            >
+                {name}
+            </h1>
+            <div class="prose prose-invert">
+                <Content />
+            </div>
+        </main>
+    </div>
+</Layout>
