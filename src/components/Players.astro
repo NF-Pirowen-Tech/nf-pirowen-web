@@ -1,0 +1,29 @@
+---
+import { getCollection } from "astro:content"
+import PlayerCard from '../components/PlayerCard.astro';
+
+const players = await getCollection("players");
+
+const positions = ["PORTEROS", "DEFENSAS", "CENTROCAMPISTAS", "DELANTEROS"];
+---
+
+<div class="w-full flex flex-col items-center">
+    <h1 class="text-5xl font-bold p-4">NF PIROWEN</h1>
+
+    <div class="bg-white lg:w-9/12 flex items-center flex-col justify-center rounded-lg mb-4">
+    {
+       positions.map((position) => (
+        <div class="flex gap-4 flex-col items-center">
+            <h1 class="text-3xl font-bold text-[#222222] p-2">{position}</h1>
+            <div class="grid grid-cols-1 lg:grid-cols-3 justify-items-center mb-4 gap-4">
+            {players
+                .filter((player) => player.data.position === position)
+                .map((player) => (
+                <PlayerCard player={player.data} />
+                ))}
+            </div>
+        </div>
+        ))
+    }
+    </div>
+</div>

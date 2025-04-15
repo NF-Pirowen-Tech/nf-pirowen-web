@@ -1,0 +1,29 @@
+---
+// src/components/PlayerCard.astro
+const { player } = Astro.props;
+const imageUrl = `/images/${player.img}`;
+---
+
+<div
+  class="relative w-[300px] h-[400px] bg-[#6f4695] shadow-md rounded-lg overflow-hidden text-white flex flex-col justify-end items-center"
+>
+  <img
+    src={imageUrl}
+    alt={player.name}
+    class="absolute top-0 left-1/2 -translate-x-1/2 w-[250px] object-contain z-0"
+  />
+
+  <div class="relative z-10 flex flex-col items-center pb-6">
+    <h1 class="numbers text-8xl">{player.dorsal}</h1>
+    <h2 class="uppercase text-3xl">{player.name}</h2>
+  </div>
+</div>
+
+<style>
+    .numbers {
+		font-family: 'Anton', sans-serif;
+		color: #fff;
+		text-align: center;
+        opacity: 0.6;
+	}
+</style>
