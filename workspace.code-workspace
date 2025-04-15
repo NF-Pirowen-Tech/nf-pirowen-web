@@ -6,11 +6,16 @@
 	],
 	"settings": {
 		"cSpell.words": [
+			"direnv",
 			"github",
+			"jetbrains",
+			"nfpirowen",
 			"nixos",
 			"nixpkgs",
 			"Pirowen",
-			"pkgs"
+			"pkgs",
+			"tailwindcss",
+			"tsconfigs"
 		]
 	}
 }
