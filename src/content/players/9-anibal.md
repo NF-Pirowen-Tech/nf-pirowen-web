@@ -7,4 +7,5 @@ goodLeg: "RIGHT"
 img: "sam.png"
 ---
 
-POSE PUTO FAI ALGO
+POSE PUTO FAI ALGO aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa

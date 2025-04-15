@@ -6,10 +6,10 @@ const imageUrl = `/images/${img}`;
 ---
 
 <div
-    class="relative w-[300px] h-[400px] bg-[#6f4695] shadow-md rounded-lg overflow-hidden text-white flex flex-col justify-end items-center"
+    transition:name={`card-${slug}`}
+    class="relative w-[300px] h-[400px] bg-[#613788] shadow-md rounded-lg overflow-hidden text-white flex flex-col justify-end items-center"
 >
     <img
-        transition:name={`img-${slug}`}
         class="absolute top-0 left-1/2 -translate-x-1/2 w-[250px] object-contain z-0"
         src={imageUrl}
         alt={name}

@@ -1,6 +1,7 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import { getCollection, render } from 'astro:content';
+import Layout from "../../layouts/Layout.astro";
+import PlayerCard from "../../components/PlayerCard.astro";
+import { getCollection, render } from "astro:content";
 
 export async function getStaticPaths() {
     const players = await getCollection("players");
@@ -15,29 +16,23 @@ const { player } = Astro.props;
 const { slug, data } = player;
 const { name, age, position, dorsal, goodLeg, img } = data;
 const { Content } = await render(player);
-const imageUrl = `/images/${img}`;
 ---
 
 <Layout title={`${name} - NF Pirowen`}>
-    <div class="flex gap-12">
-        <aside class="flex flex-col items-center gap-4">
-            <a href="/" class="hover:underline opacity-70">← Volver atrás</a>
-            <img
-                transition:name={`img-${slug}`}
-                class="rounded w-72 h-auto"
-                src={imageUrl}
-                alt={name}
-            />
+    <div class="flex gap-16 px-8 pt-8 max-w-screen-xl mx-auto">
+        <aside class="flex flex-col items-center w-64">
+            <a href="/" class="text-1xl mb-8 hover:underline text-white">← Volver atrás</a>
+            <PlayerCard player={player} />
         </aside>
 
-        <div class="flex flex-col items-center gap-4 bg-white p-6 rounded-xl w-full mb-6"
-            <h1
-                transition:name={`name-${slug}`}
-                class="text-4xl font-bold mb-4"
-            >
-                {name} {dorsal}
+        <div class="flex-1">
+            <h1 class="text-4xl mb-4">
+                Ficha:
             </h1>
-            <div class="prose">
+
+            <div
+                class="prose flex flex-col gap-4 bg-white p-6 rounded-xl w-full max-w-3xl mx-auto mb-6 break-all overflow-x-auto"
+            >
                 <Content />
             </div>
         </div>
