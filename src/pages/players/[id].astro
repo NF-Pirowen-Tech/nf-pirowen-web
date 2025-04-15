@@ -30,16 +30,16 @@ const imageUrl = `/images/${img}`;
             />
         </aside>
 
-        <main class="max-w-3xl">
+        <div class="flex flex-col items-center gap-4 bg-white p-6 rounded-xl w-full mb-6"
             <h1
                 transition:name={`name-${slug}`}
                 class="text-4xl font-bold mb-4"
             >
                 {name} {dorsal}
             </h1>
-            <div class="prose prose-invert">
+            <div class="prose">
                 <Content />
             </div>
-        </main>
+        </div>
     </div>
 </Layout>
