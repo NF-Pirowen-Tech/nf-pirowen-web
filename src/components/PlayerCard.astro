@@ -1,7 +1,5 @@
 ---
-// src/components/PlayerCard.astro
 const { player } = Astro.props;
-
 const { slug, data } = player;
 const { name, dorsal, img } = data;
 const imageUrl = `/images/${img}`;
@@ -18,18 +16,9 @@ const imageUrl = `/images/${img}`;
     />
 
     <div class="relative z-10 flex flex-col items-center pb-6">
-        <h1 class="numbers text-8xl">{dorsal}</h1>
-        <h2 transition:name={`name-${slug}`} class="uppercase text-3xl">
+        <h1 class="center text-8xl">{dorsal}</h1>
+        <h2 class="uppercase text-3xl">
             {name}
         </h2>
     </div>
 </div>
-
-<style>
-    .numbers {
-        font-family: "Anton", sans-serif;
-        color: #fff;
-        text-align: center;
-        opacity: 0.6;
-    }
-</style>
