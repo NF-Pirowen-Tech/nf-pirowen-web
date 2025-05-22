@@ -1,0 +1,15 @@
+---
+import anosEscudo from '../assets/anosEscudo.png';
+import scdpEscudo from '../assets/scdpescudo.png';
+import escudoDefault from '../assets/escudoDefaultBlanco.png';
+
+const rival = {...Astro.props}
+---
+<div class={`flex flex-col font-bold w-1/3 lg:text-xl items-center ${rival.local === "si" ? "lg:flex-row" : "lg:flex-row-reverse"} `}>
+    <div class="w-20 flex justify-center">
+        {rival.nombre === "SCDP" && <img src={scdpEscudo.src} class="w-16" alt="Escudo SCDP"  />}
+        {rival.nombre === "SD Anos" && <img src={anosEscudo.src} class="w-16" alt="Escudo SD Anos" />}
+        {rival.nombre === "Baiñas" && <img src={escudoDefault.src} class="w-16" alt="Escudo Baiñas" />}
+    </div>
+    <p>{rival.nombre}</p>
+</div>

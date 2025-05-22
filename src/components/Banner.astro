@@ -1,11 +1,38 @@
 ---
-import bannerImg from '../assets/Banner.png';
+import bannerImg from '../assets/EscudoSinFondo.png';
+import Youtube from '../icons/Youtube.astro';
+import Twitter from '../icons/Twitter.astro';
+import Instagram from '../icons/Instagram.astro';
+import menuImg from '../assets/menu.png'
+import cerrarImg from '../assets/cerrar-blanco.png'
+import {openNav, closeNav} from '../components/nav.js'
+
+const SOCIALMEDIA = [
+    { link: 'https://x.com/nfpirowen', icon: Twitter },
+    { link: 'https://instagram.com/nfpirowen?igshid=MzRlODBiNWFlZA==…', icon: Instagram },
+    { link: 'https://www.youtube.com/@NFPirowen', icon: Youtube }];
+
 ---
 
-<div class="px-4 relative w-full max-h-[350px] overflow-hidden">
-  <img 
-    src={bannerImg.src} 
-    alt="Banner" 
-    class="w-full h-full object-cover" 
-  />
+<div class="relative bg-[#e1a61a] p-4 flex lg:flex-row flex-col items-center w-full max-h-[350px] overflow-hidden gap-x-4 mb-2">
+  <div class="w-full lg:w-1/2 flex flex-row">
+    <a href="/" class="flex flex-row gap-x-4 items-center text-3xl font-bold uppercase">
+      <img 
+        src={bannerImg.src} 
+        alt="Banner" 
+        class="w-20 h-full object-cover" 
+      />
+      <p class="text-5xl lg:text-7xl text-white">NF Pirowen</p>
+    </a>
+  </div>
+  <div class="w-full lg:w-1/2 flex">
+    <nav class="w-full flex items-center">
+      <ul class="text-xl items-center lg:justify-around w-full justify-between flex lg:text-2xl font-bold gap-x-2 uppercase">
+        <a class="text-white hover:scale-[1.05] transition-all"  href="/jugadores">Jugadores</a>
+        <a class="text-white hover:scale-[1.05] transition-all" href="/partidos">Partidos</a>
+        <a class="text-white hover:scale-[1.05] transition-all" href="/equipaciones">Equipaciones</a>
+      </ul>
+    </nav>
+  </div>
+</div>
 </div>

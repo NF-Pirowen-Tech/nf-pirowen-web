@@ -1,0 +1,47 @@
+---
+import Rival from './Rival.astro';
+import Resultado from './Resultado.astro';
+import Local from './Local.astro';
+
+
+const meses = ["Junio", "Julio", "Agosto"]
+const partidos = [
+    {fecha: "SÁBADO 07", mes: "Junio", rival: "Baiñas", resultado: "0 - 1", local: "no"},
+    {fecha: "SÁBADO 23", mes: "Junio", rival: "SCDP", resultado: "0 - 1", local: "si"},
+    {fecha: "SÁBADO 05", mes: "Julio", rival: "SD Anos", resultado: "-", local: "no"},
+    {fecha: "SÁBADO 26", mes: "Julio", rival: "SD Anos", resultado: "-", local: "si"},
+    {fecha: "SÁBADO 02", mes: "Agosto", rival: "Baiñas", resultado: "-", local: "si"},
+    {fecha: "SÁBADO 09", mes: "Agosto" , rival: "SCDP", resultado: "-", local: "no"},
+]
+---
+
+<div class="gap-y-4 flex flex-col justify-center rounded-xl  w-11/12 lg:w-8/12 bg-[#2a2a2a]">
+    {meses.map((mes) => (
+        <div class="w-full rounded-md gap-y-4 flex p-4 flex-col text-white">
+            <h1 class="text-3xl lg:text-5xl font-bold text-[#e1a61a]">{mes}</h1>
+            {partidos.filter((partido) => partido.mes === mes).map((partido) => (
+                <div class="w-11/12 rounded-md items-center flex">
+                    <div class="hidden lg:flex w-1/3">
+                        <p class="lg:text-2xl font-bold">{partido.fecha.slice(0, 3).concat("." + partido.fecha.slice(-3))}.</p>
+                    </div>
+                    {partido.local === "si" &&
+                        <div class="flex w-full items-center gap-x-4 flex-row">
+                                    <Local local={partido.local} />
+                                    <Resultado resultado={partido.resultado} />
+                                    <Rival nombre={partido.rival} local={partido.local} />
+                        </div>
+                    }
+                    {partido.local === "no" &&
+                        <div class="flex w-full items-center gap-x-4 flex-row">
+                                    <Rival nombre={partido.rival} local={partido.local} />
+                                    <Resultado resultado={partido.resultado} />
+                                    <Local local={partido.local} />
+                        </div>
+                    }
+                </div>
+                <hr class="bg-[#e1a61a] h-px my-3 border-0" />
+            ))}
+        </div>
+    ))}
+
+</div>

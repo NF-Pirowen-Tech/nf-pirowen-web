@@ -1,0 +1,20 @@
+---
+const kits = [
+    {nombre: "Primera Equipacion", src: "/src/assets/equipacion1.png", texto: "La camiseta morada es nuestra insignia, encarnando la esencia misma del club. El color morado, que simboliza la unidad y el compromiso, es la base de esta prenda. La inclusión del dorado, un color que evoca nobleza y liderazgo, refleja nuestra dedicación en el campo. Además, estamos orgullosos de contar con el patrocinio de Gasthof, un restaurante local, que llevamos en el pecho. Este diseño plasma nuestra comunidad cohesionada y nuestra voluntad de destacar con determinación y estilo.", color: "bg-[#6e4695]"},
+    {nombre: "Segunda Equipacion", src: "/src/assets/equipacion2.png", texto: "La camiseta negra fue elegida durante nuestro primer año como club. En ella, representamos nuestra lucha y determinación por establecernos en el mundo del fútbol. Aunque ya no es nuestra principal, sigue siendo una parte importante de nuestra historia, recordándonos los desafíos superados. Esta camiseta personifica la perseverancia y la constante evolución de NF Pirowen.", class: "flex-row-reverse", color: "bg-[#e1a61a]"},
+]
+
+//3a3b42
+---
+
+{kits.map((kit) => (
+        <div class={`w-full flex ${kit.class} p-2 ${kit.color} gap-x-4 rounded-md`}>
+            <div class="w-2/4">
+                <img src={kit.src} class="w-full" alt={kit.nombre} />
+            </div>
+            <div class="w-2/4 flex flex-col justify-center gap-y-4">
+                <h1 class="text-5xl font-bold">{kit.nombre}</h1>
+                <p class="text-2xl">{kit.texto}</p>
+            </div>
+        </div>
+))}

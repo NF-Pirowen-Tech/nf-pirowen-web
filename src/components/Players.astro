@@ -17,7 +17,7 @@ const positions = ["PORTEROS", "DEFENSAS", "CENTROCAMPISTAS", "DELANTEROS"];
       .map((player) => {
         const { slug } = player;
         return (
-          <a href={`/players/${slug}`} class="no-underline w-full flex justify-center">
+          <a href={`/jugadores/${slug}`} class="no-underline w-full flex justify-center">
             <PlayerCard player={player} />
           </a>
         );

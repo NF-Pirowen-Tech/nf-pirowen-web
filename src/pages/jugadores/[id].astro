@@ -17,21 +17,21 @@ const { slug, data } = player;
 const { name, age, position, dorsal, goodLeg, img } = data;
 const { Content } = await render(player);
 ---
+<Layout>
 
-<Layout title={`${name} - NF Pirowen`}>
-    <div class="flex gap-16 px-8 pt-8 max-w-screen-xl mx-auto">
+    <div class="flex lg:flex-row flex-col gap-16 px-8 pt-8 max-w-screen-xl mx-auto items-center">
         <aside class="flex flex-col items-center w-64">
-            <a href="/" class="text-1xl mb-8 hover:underline text-white">← Volver atrás</a>
+            <a href="/jugadores" class="text-1xl mb-8 hover:underline text-white"><button class="p-2 bg-[#6e4695] border border-black rounded-md">← Volver atrás</button></a>
             <PlayerCard player={player} />
         </aside>
-
+    
         <div class="flex-1">
-            <h1 class="text-4xl mb-4">
+            <h1 class="text-4xl mb-4 p-2">
                 Ficha:
             </h1>
-
+    
             <div
-                class="prose flex flex-col gap-4 bg-white p-6 rounded-xl w-full max-w-3xl mx-auto mb-6 break-all overflow-x-auto"
+                class="prose flex flex-col gap-4 bg-white p-6 rounded-xl w-full max-w-3xl mx-auto mb-6 break-all overflow-x-auto text-black"
             >
                 <Content />
             </div>

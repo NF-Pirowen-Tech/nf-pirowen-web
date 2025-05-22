@@ -1,2 +1,22 @@
 @import "tailwindcss";
-@plugin "@tailwindcss/typography";
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    width: 33.33%;
+    align-items: center;
+    margin-left: 25px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    background-color: #623668;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 20px;
+}

@@ -1,0 +1,11 @@
+---
+import nfEscudo from '../assets/EscudoSinFondo.png';
+
+const props = {...Astro.props}
+---
+<div class={`flex flex-col font-bold lg:w-1/3 w-full lg:text-xl items-center ${props.local === "no" ? "lg:flex-row" : "lg:flex-row-reverse"} `}>
+    <div class="w-20 flex justify-center">
+        <img src={nfEscudo.src} class="w-12 h-[71.08px]" alt="Escudo NF Pirowen"  />
+    </div>
+    <p>NF Pirowen</p>
+</div>
